@@ -40,7 +40,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "DescomMarket\\Common\\CommonServiceProvider"
+                "DescomMarket\\Common\\DescomMarketCommonServiceProvider"
             ]
         }
     },
