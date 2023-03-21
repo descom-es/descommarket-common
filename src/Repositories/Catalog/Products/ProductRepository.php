@@ -17,7 +17,7 @@ class ProductRepository
 
     public static function get(int $productId): ?array
     {
-        if (!isset(static::$repository)) {
+        if (! isset(static::$repository)) {
             return null;
         }
 
