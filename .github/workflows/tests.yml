@@ -22,7 +22,7 @@ jobs:
             testbench: 8.*
         exclude:
           - laravel: 10.*
-            php: 8.0
+            php-version: 8.0
 
     steps:
     - uses: actions/checkout@v2
@@ -43,7 +43,7 @@ jobs:
         path: vendor
         key: ${{ runner.os }}-php-${{ matrix.php }}-laravel-${{ matrix.laravel }}-${{ hashFiles('**/composer.lock') }}
         restore-keys: |
-        
+
           ${{ runner.os }}-php-${{ matrix.php }}-laravel-${{ matrix.laravel }}
     - name: Install dependencies
       if: steps.composer-cache.outputs.cache-hit != 'true'
