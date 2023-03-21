@@ -2,7 +2,7 @@
 
 namespace DescomMarket\Common\Repositories\Catalog\Products;
 
-class ProductRepository
+final class ProductRepository
 {
     private static ProductRepositoryInterface $repository;
 
