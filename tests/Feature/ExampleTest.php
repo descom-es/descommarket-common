@@ -1,8 +1,8 @@
 <?php
 
-namespace Descom\Skeleton\Tests\Feature;
+namespace DescomMarket\Common\Tests\Feature;
 
-use Descom\Skeleton\Tests\TestCase;
+use DescomMarket\Common\Tests\TestCase;
 
 class ExampleTest extends TestCase
 {
