@@ -1,6 +1,6 @@
 <?php
 
-namespace DescomMarket\Common\Enums\Sales;
+namespace DescomMarket\Common\Enums\Sales\Orders;
 
 enum OrderStatus: string
 {
