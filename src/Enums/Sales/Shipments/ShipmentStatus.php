@@ -1,6 +1,6 @@
 <?php
 
-namespace DescomMarket\Common\Enums\Sales\Shippings;
+namespace DescomMarket\Common\Enums\Sales\Shipments;
 
 enum ShipmentStatus: string
 {
