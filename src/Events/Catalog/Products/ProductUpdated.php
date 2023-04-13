@@ -7,7 +7,7 @@ namespace DescomMarket\Common\Events\Catalog\Products;
  */
 class ProductUpdated
 {
-    public function __construct(public readonly int $productId)
+    public function __construct(public readonly int $productId, public readonly array $attributesChanged)
     {
     }
 }
