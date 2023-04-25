@@ -2,12 +2,12 @@
 
 namespace DescomMarket\Common\Notifications\Admin;
 
-use Illuminate\Bus\Queueable;
 use Descom\B2b\Core\App\WhatsApp\Template;
 use Descom\B2b\Core\App\WhatsApp\WhatsApp;
-use Illuminate\Notifications\Notification;
+use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
+use Illuminate\Notifications\Notification;
 
 class ReportNotification extends Notification implements ShouldQueue
 {
@@ -18,7 +18,6 @@ class ReportNotification extends Notification implements ShouldQueue
     public function __construct(private string $subject, private string $message, private ?string $urlAction = null)
     {
     }
-
 
     public function via($notifiable)
     {
@@ -54,7 +53,7 @@ class ReportNotification extends Notification implements ShouldQueue
     {
         $urlPath = $this->urlAction ? str_replace([Frontend::url(''), Frontend::urlApi('')], '', $this->urlAction) : null;
 
-        $whatsapp =  Template::build($this->whatsAppTemplate)
+        $whatsapp = Template::build($this->whatsAppTemplate)
             ->parameters([$this->message]);
 
         if ($urlPath) {

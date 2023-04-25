@@ -1,6 +1,7 @@
 <?php
 
 namespace DescomMarket\Common\Notifiables;
+
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Notifications\Notification;
 
