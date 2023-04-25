@@ -11,7 +11,7 @@ class ReportNotification extends Notification implements ShouldQueue
 {
     use Queueable;
 
-    public function __construct(private string $subject, private string $message)
+    public function __construct(private string $subject, private string $message, private ?string $urlAction = null)
     {
     }
 
