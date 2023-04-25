@@ -12,6 +12,11 @@ class AdminNotifiable
     private static array $emails = [];
     private static ?string $mobile = null;
 
+    public function getKey(): string
+    {
+        return 'admin';
+    }
+
     public static function configEmails(array $emails): void
     {
         self::$emails = $emails;
