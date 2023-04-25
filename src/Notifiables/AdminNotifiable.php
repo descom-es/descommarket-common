@@ -12,12 +12,12 @@ class AdminNotifiable
     private static array $emails = [];
     private static ?string $mobile = null;
 
-    private static function configEmails(array $emails): void
+    public static function configEmails(array $emails): void
     {
         self::$emails = $emails;
     }
 
-    private static function configMobile(string $mobile): void
+    public static function configMobile(string $mobile): void
     {
         self::$mobile = $mobile;
     }
