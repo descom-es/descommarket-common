@@ -17,6 +17,11 @@ class AdminNotifiable
         self::$emails = $emails;
     }
 
+    private static function configMobile(string $mobile): void
+    {
+        self::$mobile = $mobile;
+    }
+
     public function routeNotificationForMail(Notification $notification): array|string
     {
         return self::$emails;
