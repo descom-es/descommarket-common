@@ -31,8 +31,7 @@ class ReportNotification extends Notification implements ShouldQueue
         $mailMessage = new MailMessage();
 
         $mailMessage->subject($this->subject)
-            ->line($this->message)
-            ->salutation('El equipo Yapayoo');
+            ->line($this->message);
 
         if ($this->urlAction) {
             $mailMessage->action('VER', $this->urlAction);
