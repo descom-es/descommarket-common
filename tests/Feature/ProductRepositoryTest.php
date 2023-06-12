@@ -8,6 +8,20 @@ use DescomMarket\Common\Tests\TestCase;
 
 class ProductRepositoryTest extends TestCase
 {
+    public function setUp(): void
+    {
+        parent::setUp();
+
+        ProductRepository::clearConfig();
+    }
+
+    public function testDefinedRepository()
+    {
+        $this->assertFalse(ProductRepository::configDefined());
+        ProductRepository::config(new ProductRepositoryDriver());
+        $this->assertTrue(ProductRepository::configDefined());
+    }
+
     public function testGetRepositoryUni()
     {
         $product = ProductRepository::get(1);
