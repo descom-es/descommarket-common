@@ -10,10 +10,17 @@ abstract class NotificationDescomMarket extends Notification implements ShouldQu
 {
     use Queueable;
 
+    public $tries = 10;
+
     public function __construct()
     {
         $this->onConnection(config('dm360.notifications.queue.connection', 'sync'));
 
         $this->onQueue(config('dm360.notifications.queue.name'));
+    }
+
+    public function backoff(): int
+    {
+        return 600;
     }
 }
