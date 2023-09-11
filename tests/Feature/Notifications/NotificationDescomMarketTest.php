@@ -3,11 +3,11 @@
 namespace DescomMarket\Common\Tests\Feature\Notifications;
 
 use DescomMarket\Common\Notifiables\AdminNotifiable;
-use DescomMarket\Common\Notifications\Admin\ReportNotification;
+use DescomMarket\Common\Tests\Stubs\TestNotification;
 use DescomMarket\Common\Tests\TestCase;
 use Illuminate\Support\Facades\Notification;
 
-class ReportNotificationTest extends TestCase
+class NotificationDescomMarketTest extends TestCase
 {
     public function testSendReportNotification()
     {
@@ -15,11 +15,11 @@ class ReportNotificationTest extends TestCase
 
         AdminNotifiable::configEmails(['sample@example.com']);
 
-        (new AdminNotifiable())->notify(new ReportNotification('subject', 'body'));
+        (new AdminNotifiable())->notify(new TestNotification('message'));
 
         Notification::assertSentTo(
             (new AdminNotifiable()),
-            ReportNotification::class
+            TestNotification::class
         );
     }
 }
