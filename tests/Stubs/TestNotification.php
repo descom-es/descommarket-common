@@ -22,6 +22,4 @@ class TestNotification extends NotificationDescomMarket
             ->subject('Test Notification')
             ->line($this->message);
     }
-
-
 }
