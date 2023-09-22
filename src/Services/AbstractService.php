@@ -1,9 +1,12 @@
 <?php
 
+namespace DescomMarket\Common\Services;
+
+use DescomMarket\Common\Contracts\Runnable;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
-abstract class AbstractService
+abstract class AbstractService implements Runnable
 {
     protected Request $request;
 
@@ -14,17 +17,17 @@ abstract class AbstractService
             : new Request($request);
     }
 
+    public function run(): void
+    {
+        $this->validate();
+    }
+
     protected function validations(): array
     {
         return [];
     }
 
-    public function run()
-    {
-        $this->validate();
-    }
-
-    protected function validate()
+    private function validate()
     {
         $this->request->validate($this->validations());
     }
