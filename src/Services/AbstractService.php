@@ -4,7 +4,6 @@ namespace DescomMarket\Common\Services;
 
 use DescomMarket\Common\Contracts\Runnable;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
 
 abstract class AbstractService implements Runnable
 {

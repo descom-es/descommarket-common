@@ -2,9 +2,7 @@
 
 namespace DescomMarket\Common\Tests\Feature\Services;
 
-use DescomMarket\Common\Repositories\Catalog\Products\ProductRepository;
 use DescomMarket\Common\Services\AbstractService;
-use DescomMarket\Common\Tests\Stubs\ProductRepositoryDriver;
 use DescomMarket\Common\Tests\TestCase;
 use Illuminate\Validation\ValidationException;
 
