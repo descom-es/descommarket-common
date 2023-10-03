@@ -2,10 +2,10 @@
 
 namespace DescomMarket\Common\Tests\Feature\Parsers;
 
-use DescomMarket\Common\Parsers\MobileParser;
+use DescomMarket\Common\Parsers\MobileNumberParser;
 use DescomMarket\Common\Tests\TestCase;
 
-class MobileParserTest extends TestCase
+class MobileNumberParserTest extends TestCase
 {
     public function testParseValid()
     {
@@ -19,7 +19,7 @@ class MobileParserTest extends TestCase
         ]);
 
         $test->each(function ($expected, $mobile) {
-            $parsedMobile = MobileParser::parse($mobile);
+            $parsedMobile = MobileNumberParser::parse($mobile);
 
             $this->assertEquals($expected, $parsedMobile);
         });
@@ -35,7 +35,7 @@ class MobileParserTest extends TestCase
         ]);
 
         $test->each(function ($mobile) {
-            $parsedMobile = MobileParser::parse($mobile);
+            $parsedMobile = MobileNumberParser::parse($mobile);
 
             $this->assertNull($parsedMobile);
         });

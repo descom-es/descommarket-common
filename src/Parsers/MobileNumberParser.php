@@ -6,7 +6,7 @@ use Exception;
 use libphonenumber\PhoneNumberFormat;
 use libphonenumber\PhoneNumberUtil;
 
-final class MobileParser
+final class MobileNumberParser
 {
     private static $defaultRegion = 'ES';
 
