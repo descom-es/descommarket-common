@@ -16,9 +16,11 @@ abstract class AbstractService implements Runnable
             : new Request($request);
     }
 
-    public function run(): void
+    public function run(): mixed
     {
         $this->validate();
+
+        return null;
     }
 
     protected function validations(): array
