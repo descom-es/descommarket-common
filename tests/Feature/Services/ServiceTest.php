@@ -44,10 +44,10 @@ class MyService extends AbstractService
         ];
     }
 
-    public function run(): void
+    public function run(): mixed
     {
         parent::run();
 
-        // Do something
+        return null;
     }
 }
