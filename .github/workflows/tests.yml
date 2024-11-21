@@ -23,8 +23,6 @@ jobs:
         exclude:
           - laravel: 10.*
             php: 8.4
-          - laravel: 11.*
-            php: 8.2
 
     steps:
       - name: Checkout code
