@@ -29,7 +29,7 @@ class ServiceTest extends TestCase
 
         $service->run();
 
-        $this->assertTrue(true);
+        // $this->assertTrue(true);
     }
 }
 
