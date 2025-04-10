@@ -27,9 +27,7 @@ class ServiceTest extends TestCase
             'email' => 'example@example.com',
         ]);
 
-        $service->run();
-
-        // $this->assertTrue(true);
+        $this->assertNull($service->run());
     }
 }
 
